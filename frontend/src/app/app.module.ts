@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './services/api/api.service';
+import { HeaderComponent } from './components/shared/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ApiService } from './services/api/api.service';
     HomeComponent,
     NewsComponent,
     RisultatiPartiteComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

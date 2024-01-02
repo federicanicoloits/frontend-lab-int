@@ -11,6 +11,8 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './services/api/api.service';
 import { HeaderComponent } from './components/shared/header/header.component';
+import { NewsContainerComponent } from './components/specific/news-container/news-container.component';
+import { NewsMainComponent } from './components/shared/news-main/news-main.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { HeaderComponent } from './components/shared/header/header.component';
     NewsComponent,
     RisultatiPartiteComponent,
     HeaderComponent,
+    NewsContainerComponent,
+    NewsMainComponent,
   ],
   imports: [
     BrowserModule,

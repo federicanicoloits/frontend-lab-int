@@ -13,6 +13,7 @@ import { ApiService } from './services/api/api.service';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { NewsContainerComponent } from './components/specific/news-container/news-container.component';
 import { NewsMainComponent } from './components/shared/news-main/news-main.component';
+import { NewsSideComponent } from './components/shared/news-side/news-side.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { NewsMainComponent } from './components/shared/news-main/news-main.compo
     HeaderComponent,
     NewsContainerComponent,
     NewsMainComponent,
+    NewsSideComponent,
   ],
   imports: [
     BrowserModule,

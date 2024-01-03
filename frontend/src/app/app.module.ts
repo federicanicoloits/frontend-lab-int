@@ -19,6 +19,8 @@ import {
   Clock,
   Info,
 } from 'lucide-angular';
+import { LastmatchContainerComponent } from './components/specific/lastmatch-container/lastmatch-container.component';
+import { SinglematchPreviewComponent } from './components/shared/singlematch-preview/singlematch-preview.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import {
     NewsContainerComponent,
     NewsMainComponent,
     NewsSideComponent,
+    LastmatchContainerComponent,
+    SinglematchPreviewComponent,
   ],
   imports: [
     BrowserModule,

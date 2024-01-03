@@ -14,13 +14,12 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NewsContainerComponent } from './components/specific/news-container/news-container.component';
 import { NewsMainComponent } from './components/shared/news-main/news-main.component';
 import { NewsSideComponent } from './components/shared/news-side/news-side.component';
-import {
-  LucideAngularModule,
-  Clock,
-  Info,
-} from 'lucide-angular';
+import { LucideAngularModule, Clock, Info, ChevronDown } from 'lucide-angular';
 import { LastmatchContainerComponent } from './components/specific/lastmatch-container/lastmatch-container.component';
 import { SinglematchPreviewComponent } from './components/shared/singlematch-preview/singlematch-preview.component';
+import { FootballTablesContainerComponent } from './components/specific/football-tables-container/football-tables-container.component';
+import { FootballTablesComponent } from './components/shared/football-tables/football-tables.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +33,9 @@ import { SinglematchPreviewComponent } from './components/shared/singlematch-pre
     NewsSideComponent,
     LastmatchContainerComponent,
     SinglematchPreviewComponent,
+    FootballTablesContainerComponent,
+    FootballTablesComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,8 @@ import { SinglematchPreviewComponent } from './components/shared/singlematch-pre
     ReactiveFormsModule,
     LucideAngularModule.pick({
       Clock,
-      Info
+      Info,
+      ChevronDown,
     }),
   ],
   providers: [ApiService],

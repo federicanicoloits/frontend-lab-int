@@ -14,6 +14,11 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NewsContainerComponent } from './components/specific/news-container/news-container.component';
 import { NewsMainComponent } from './components/shared/news-main/news-main.component';
 import { NewsSideComponent } from './components/shared/news-side/news-side.component';
+import {
+  LucideAngularModule,
+  Clock,
+  Info,
+} from 'lucide-angular';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,10 @@ import { NewsSideComponent } from './components/shared/news-side/news-side.compo
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    LucideAngularModule.pick({
+      Clock,
+      Info
+    }),
   ],
   providers: [ApiService],
   bootstrap: [AppComponent],

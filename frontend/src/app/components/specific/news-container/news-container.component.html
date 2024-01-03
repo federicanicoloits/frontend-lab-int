@@ -1,11 +1,17 @@
 <!-- container news index -->
-<section class=" bg-pink-300 w-full min-h-[60vh]  flex flex-col justify-center items-center lg:flex-row p-6 lg:p-12 ">
+<section class=" bg-pink-300 w-full min-h-[60vh]  flex flex-col justify-center items-center flex-wrap lg:flex-row p-6 lg:p-12 ">
 
   <div class="bg-violet-300 min-h-[60vh] w-full lg:w-2/3 flex justify-center items-center p-6">
     <app-news-main></app-news-main>
   </div>
-  <div class="bg-violet-500 min-h-[60vh] w-full lg:w-1/3 flex flex-col gap-3 justify-center p-6 lg:p-20">
+  <div class="bg-violet-500 min-h-[60vh] w-full lg:w-1/3 flex flex-col gap-3 justify-center p-6">
     <app-news-side></app-news-side>
     <app-news-side></app-news-side>
+  </div>
+  <div class="w-full bg-green-300 h-auto flex items-center justify-center">
+    <div class="flex gap-1">
+      <p>Mostra di più</p>
+      <i-lucide name="info" class="my-icon text-white"></i-lucide>
+    </div>
   </div>
 </section>

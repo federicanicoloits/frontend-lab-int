@@ -20,6 +20,7 @@ import { SinglematchPreviewComponent } from './components/shared/singlematch-pre
 import { FootballTablesContainerComponent } from './components/specific/football-tables-container/football-tables-container.component';
 import { FootballTablesComponent } from './components/shared/football-tables/football-tables.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { PageNewsNewsContainerComponent } from './components/specific/page-news-news-container/page-news-news-container.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     FootballTablesContainerComponent,
     FootballTablesComponent,
     FooterComponent,
+    PageNewsNewsContainerComponent,
   ],
   imports: [
     BrowserModule,

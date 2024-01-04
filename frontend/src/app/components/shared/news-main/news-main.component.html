@@ -1,5 +1,5 @@
 <div
-  class="bg-grigio w-full min-h-[45vh] flex flex-col items-center justify-center p-4 md:flex-row rounded-3xl cursor-pointer"
+  class="bg-grigio min-h-[45vh] flex flex-col items-center justify-center p-4 md:flex-row rounded-3xl cursor-pointer"
 >
   <div class="h-[45vh] w-full md:w-[42%] relative">
     <img
@@ -12,13 +12,14 @@
       class="bg-black h-full w-full opacity-15 absolute top-0 left-0 rounded-3xl"
     ></div>
   </div>
-  <!-- <div class="bg-blue-400 h-full w-[42%]"></div> -->
   <div
     class="h-[45vh] w-full md:w-[58%] flex flex-col justify-center gap-4 p-4"
   >
     <div class="flex gap-1 items-center">
       <i-lucide name="clock" class="my-icon text-white"></i-lucide>
-      <p class="font-semibold text-lg">{{ dati?.news[0]?.data_ora }}</p>
+      <p *ngIf="dati" class="font-semibold text-lg">
+        {{ dati.news[0]?.data_ora }}
+      </p>
     </div>
     <h2 class="font-bold text-lime-400 text-3xl">
       {{ dati?.news[0]?.titolo }}

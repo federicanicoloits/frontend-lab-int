@@ -35,6 +35,15 @@
       "hashtags": ["Roma", "Lazio", "Derby"],
       "testo": "Il derby tra Roma e Lazio è stato uno degli incontri più intensi della stagione di Serie A. Le due squadre si sono affrontate con una passione e una determinazione straordinarie, regalando agli appassionati uno spettacolo indimenticabile. Il campo era una battaglia di emozioni, con entrambe le squadre che cercavano la vittoria a tutti i costi. I tifosi erano in visibilio mentre i giocatori si impegnavano in contrasti accesi e azioni spettacolari. Il risultato del derby ha amplificato la rivalità storica tra le due squadre, creando un'atmosfera elettrica nello stadio che rimarrà nella memoria di tutti i presenti.",
       "immagine_copertina": "url_immagine_4.jpg"
+    },
+    {
+      "id": 5,
+      "data_ora": "08-01-2024 18:30",
+      "titolo": "Milan vs. Inter: Derby della Madonnina",
+      "sottotitolo": "La sfida tra le squadre milanesi accende San Siro",
+      "hashtags": ["Milan", "Inter", "Derby"],
+      "testo": "Il Derby della Madonnina tra Milan e Inter ha catturato l'attenzione degli appassionati di calcio di tutto il mondo. Le due squadre si sono scontrate in una partita avvincente, caratterizzata da emozioni forti e colpi di scena. San Siro è diventato un teatro di azione, con i tifosi che sostenevano freneticamente le rispettive squadre. I giocatori si sono impegnati in duelli intensi sul terreno di gioco, cercando di portare a casa la vittoria. Il risultato finale ha scatenato festeggiamenti da parte dei tifosi vincitori e riflessioni da parte di quelli sconfitti, consolidando ulteriormente la rivalità tra Milan e Inter.",
+      "immagine_copertina": "url_immagine_5.jpg"
     }
   ]
 }

@@ -5,7 +5,7 @@
   <div
     class="min-h-[50vh] w-full lg:w-2/3 flex justify-center items-center mb-10 lg:mb-0 lg:px-10"
   >
-    <app-news-main></app-news-main>
+    <app-news-main [dati]="dati"></app-news-main>
   </div>
   <!-- side news / scroll bar -->
   <div
@@ -21,7 +21,8 @@
   <!-- scopri di piu -->
   <div class="w-full h-auto flex items-center justify-center p-6">
     <div class="flex gap-1">
-      <p class="text-lg">Mostra di più</p>
+      <!-- <p class="text-lg">Mostra di più</p> -->
+      <p *ngIf="dati" class="text-lg">{{ dati.news[0].titolo }}</p>
       <i-lucide name="info" class="my-icon text-white"></i-lucide>
     </div>
   </div>

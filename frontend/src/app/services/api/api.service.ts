@@ -11,4 +11,8 @@ export class ApiService {
   findStandings() {
     return this.http.get(this.baseUrl + 'standings');
   }
+
+  findNews() {
+    return this.http.get('assets/json/news.json');
+  }
 }

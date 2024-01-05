@@ -13,6 +13,7 @@ export class NewsComponent implements OnInit {
     this.apiService.findNews().subscribe((response) => {
       this.news = response;
       console.log(this.news);
+      console.log(10);
     });
   }
 }

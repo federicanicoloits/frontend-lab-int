@@ -1,0 +1,49 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "data_ora": "04-01-2024 14:30",
+      "titolo": "Grande vittoria della Juventus",
+      "sottotitolo": "La squadra bianconera trionfa sul campo avversario",
+      "hashtags": ["Juventus", "SerieA", "Vittoria"],
+      "testo": "La Juventus ha ottenuto una straordinaria vittoria sul campo avversario nella recente partita di Serie A, dimostrando una prestazione eccezionale che ha entusiasmato i tifosi. La squadra bianconera ha dominato il gioco con una combinazione di abilità difensive impeccabili e attacchi sorprendenti. I giocatori hanno dimostrato grande coesione e determinazione, segnando gol spettacolari che hanno reso la partita memorabile. La vittoria rappresenta un passo importante per la Juventus nella corsa al titolo della Serie A, consolidando la loro posizione tra le squadre di vertice del campionato.",
+      "immagine_copertina": "url_immagine_1.jpg"
+    },
+    {
+      "id": 2,
+      "data_ora": "05-01-2024 20:00",
+      "titolo": "Inter Milan in testa alla classifica",
+      "sottotitolo": "La squadra nerazzurra continua a brillare",
+      "hashtags": ["Inter", "Milan", "Classifica"],
+      "testo": "L'Inter Milan sta vivendo un periodo di grande successo nella stagione di Serie A, mantenendo la sua posizione in testa alla classifica. La squadra nerazzurra ha dimostrato una forma eccezionale, conquistando una serie di vittorie consecutive che la pongono come una delle favorite per il titolo. Gli appassionati tifosi dell'Inter sono entusiasti della performance della squadra, elogiando la solidità difensiva e l'efficacia in fase di attacco. Con giocatori in grande forma e un allenatore determinato, l'Inter Milan si presenta come una forza da non sottovalutare nel panorama calcistico italiano.",
+      "immagine_copertina": "url_immagine_2.jpg"
+    },
+    {
+      "id": 3,
+      "data_ora": "06-01-2024 18:45",
+      "titolo": "Napoli sorprende con una rimonta",
+      "sottotitolo": "La squadra partenopea mostra carattere",
+      "hashtags": ["Napoli", "Sorpresa", "Rimonta"],
+      "testo": "Il Napoli ha regalato ai suoi tifosi una partita memorabile con una rimonta straordinaria nell'ultima sfida di Serie A. Nonostante un inizio difficile, la squadra partenopea ha mostrato un carattere incredibile, segnando gol spettacolari che hanno ribaltato il risultato a proprio favore. I giocatori del Napoli hanno dimostrato una determinazione eccezionale e una mentalità vincente che ha entusiasmato gli appassionati. La vittoria rappresenta un momento chiave per il Napoli, evidenziando la forza e la resilienza della squadra sotto la guida dell'allenatore.",
+      "immagine_copertina": "url_immagine_3.jpg"
+    },
+    {
+      "id": 4,
+      "data_ora": "07-01-2024 16:15",
+      "titolo": "Roma vs. Lazio: Derby infuocato",
+      "sottotitolo": "La rivalità tra le due squadre raggiunge l'apice",
+      "hashtags": ["Roma", "Lazio", "Derby"],
+      "testo": "Il derby tra Roma e Lazio è stato uno degli incontri più intensi della stagione di Serie A. Le due squadre si sono affrontate con una passione e una determinazione straordinarie, regalando agli appassionati uno spettacolo indimenticabile. Il campo era una battaglia di emozioni, con entrambe le squadre che cercavano la vittoria a tutti i costi. I tifosi erano in visibilio mentre i giocatori si impegnavano in contrasti accesi e azioni spettacolari. Il risultato del derby ha amplificato la rivalità storica tra le due squadre, creando un'atmosfera elettrica nello stadio che rimarrà nella memoria di tutti i presenti.",
+      "immagine_copertina": "url_immagine_4.jpg"
+    },
+    {
+      "id": 5,
+      "data_ora": "08-01-2024 18:30",
+      "titolo": "Milan vs. Inter: Derby della Madonnina",
+      "sottotitolo": "La sfida tra le squadre milanesi accende San Siro",
+      "hashtags": ["Milan", "Inter", "Derby"],
+      "testo": "Il Derby della Madonnina tra Milan e Inter ha catturato l'attenzione degli appassionati di calcio di tutto il mondo. Le due squadre si sono scontrate in una partita avvincente, caratterizzata da emozioni forti e colpi di scena. San Siro è diventato un teatro di azione, con i tifosi che sostenevano freneticamente le rispettive squadre. I giocatori si sono impegnati in duelli intensi sul terreno di gioco, cercando di portare a casa la vittoria. Il risultato finale ha scatenato festeggiamenti da parte dei tifosi vincitori e riflessioni da parte di quelli sconfitti, consolidando ulteriormente la rivalità tra Milan e Inter.",
+      "immagine_copertina": "url_immagine_5.jpg"
+    }
+  ]
+}

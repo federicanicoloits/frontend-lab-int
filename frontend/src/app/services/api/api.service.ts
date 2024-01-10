@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { map } from 'rxjs';
+import { Standing } from 'src/app/models/standing.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +11,14 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   findStandings() {
-    return this.http.get(this.baseUrl + 'standings');
+    return this.http.get(this.baseUrl + 'standings').pipe(
+      map((response: any) => {
+        response.sort(
+          (a: Standing, b: Standing) => a.classifica - b.classifica
+        );
+        return response as Standing[];
+      })
+    );
   }
 
   findNews() {

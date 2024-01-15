@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
+import { Match } from 'src/app/models/match.interface';
 import { Standing } from 'src/app/models/standing.interface';
 
 @Injectable({
@@ -23,5 +24,13 @@ export class ApiService {
 
   findNews() {
     return this.http.get('assets/json/news.json');
+  }
+
+  findLastMatches() {
+    return this.http.get(this.baseUrl + 'matches/lastmatches').pipe(
+      map((response: any) => {
+        return response as Match[];
+      })
+    );
   }
 }

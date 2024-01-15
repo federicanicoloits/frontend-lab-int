@@ -13,7 +13,8 @@
 
   <div class="w-full h-auto flex flex-wrap gap-10 justify-center px-10">
     <app-singlematch-preview
-      *ngFor="let _ of [].constructor(11)"
+      *ngFor="let match of matches"
+      [match]="match"
     ></app-singlematch-preview>
   </div>
 </div>

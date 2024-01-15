@@ -14,11 +14,22 @@ const routes: Routes = [
       StandingsResolve: (route: ActivatedRouteSnapshot) => {
         return inject(ApiService).findStandings(3);
       },
+      PartiteResolveHome: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findLastMatches();
+      },
     },
   },
   { path: 'dettaglio-partita/:id', component: DettaglioPartiteComponent },
   { path: 'news', component: NewsComponent },
-  { path: 'risultati-partite', component: RisultatiPartiteComponent },
+  {
+    path: 'risultati-partite',
+    component: RisultatiPartiteComponent,
+    resolve: {
+      PartiteResolveRisultati: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findLastMatches();
+      },
+    },
+  },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];

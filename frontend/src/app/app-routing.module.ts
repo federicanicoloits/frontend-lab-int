@@ -4,6 +4,7 @@ import { HomeComponent } from './views/home/home.component';
 import { NewsComponent } from './views/news/news.component';
 import { RisultatiPartiteComponent } from './views/risultati-partite/risultati-partite.component';
 import { ApiService } from './services/api/api.service';
+import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
 
 const routes: Routes = [
   {
@@ -11,10 +12,11 @@ const routes: Routes = [
     component: HomeComponent,
     resolve: {
       StandingsResolve: (route: ActivatedRouteSnapshot) => {
-        return inject(ApiService).findStandings();
+        return inject(ApiService).findStandings(3);
       },
     },
   },
+  { path: 'dettaglio-partita/:id', component: DettaglioPartiteComponent },
   { path: 'news', component: NewsComponent },
   { path: 'risultati-partite', component: RisultatiPartiteComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

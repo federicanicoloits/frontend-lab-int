@@ -10,8 +10,8 @@ export class ApiService {
   baseUrl = 'http://localhost:8080/';
   constructor(private http: HttpClient) {}
 
-  findStandings() {
-    return this.http.get(this.baseUrl + 'standings').pipe(
+  findStandings(num: number) {
+    return this.http.get(this.baseUrl + 'standings?lenght=' + num).pipe(
       map((response: any) => {
         response.sort(
           (a: Standing, b: Standing) => a.classifica - b.classifica

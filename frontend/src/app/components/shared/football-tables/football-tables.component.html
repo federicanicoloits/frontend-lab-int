@@ -12,7 +12,10 @@
       <th>DR</th>
     </tr>
     <tr *ngFor="let squadra of standings">
-      <td>{{ squadra.nome }}</td>
+      <td class="flex items-center justify-center">
+        {{ squadra.nome }}
+        <img src="{{ squadra.logo }}" class="h-[5vh]" alt="" />
+      </td>
       <td>{{ squadra.classifica }}</td>
       <td>{{ squadra.punti }}</td>
       <td>{{ squadra.partiteGiocate }}</td>

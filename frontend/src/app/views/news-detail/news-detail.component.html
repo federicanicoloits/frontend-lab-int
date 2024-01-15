@@ -1,0 +1,11 @@
+<div class="news-detail-container" *ngIf="selectedNews">
+  <div class="news-detail-header" [style.background-image]="'url(' + selectedNews.immagine_copertina + ')'">
+    <h1>{{ selectedNews.titolo }}</h1>
+  </div>
+  <div class="news-detail-content">
+    <p>{{ selectedNews.testo }}</p>
+  </div>
+  <div class="related-news-container">
+    <app-related-news [relatedNews]="relatedNews"></app-related-news>
+  </div>
+</div>

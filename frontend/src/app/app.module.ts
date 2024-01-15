@@ -21,12 +21,16 @@ import { FootballTablesContainerComponent } from './components/specific/football
 import { FootballTablesComponent } from './components/shared/football-tables/football-tables.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PageNewsNewsContainerComponent } from './components/specific/page-news-news-container/page-news-news-container.component';
+import { NewsDetailComponent } from './views/news-detail/news-detail.component';
+import { RelatedNewsComponent } from './views/related-news/related-news.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NewsComponent,
+    NewsDetailComponent,
+    RelatedNewsComponent,
     RisultatiPartiteComponent,
     HeaderComponent,
     NewsContainerComponent,

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './views/home/home.component';
 import { NewsComponent } from './views/news/news.component';
 import { RisultatiPartiteComponent } from './views/risultati-partite/risultati-partite.component';
+import { NewsDetailComponent } from './views/news-detail/news-detail.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'news', component: NewsComponent },
   { path: 'risultati-partite', component: RisultatiPartiteComponent },
+  { path: 'news/:id', component: NewsDetailComponent},
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', redirectTo: '/home', pathMatch: 'full' },
 ];

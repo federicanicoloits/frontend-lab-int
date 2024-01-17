@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
+import { MatchDettaglio } from 'src/app/models/match-dettaglio.interface';
 import { Match } from 'src/app/models/match.interface';
 import { Standing } from 'src/app/models/standing.interface';
 
@@ -30,6 +31,13 @@ export class ApiService {
     return this.http.get(this.baseUrl + 'matches/lastmatches').pipe(
       map((response: any) => {
         return response as Match[];
+      })
+    );
+  }
+  findDettaglioPartita(id: string) {
+    return this.http.get(this.baseUrl + 'matches/details?fixture=' + id).pipe(
+      map((response: any) => {
+        return response as MatchDettaglio;
       })
     );
   }

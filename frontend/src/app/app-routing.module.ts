@@ -19,7 +19,17 @@ const routes: Routes = [
       },
     },
   },
-  { path: 'dettaglio-partita/:id', component: DettaglioPartiteComponent },
+  {
+    path: 'dettaglio-partita/:id',
+    component: DettaglioPartiteComponent,
+    resolve: {
+      PartitaResolveDettaglio: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findDettaglioPartita(
+          route.paramMap.get('id')!
+        );
+      },
+    },
+  },
   { path: 'news', component: NewsComponent },
   {
     path: 'risultati-partite',

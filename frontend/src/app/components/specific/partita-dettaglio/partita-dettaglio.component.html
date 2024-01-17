@@ -24,3 +24,22 @@
     <p class="text-2xl font font-medium">{{ match.GolOspiti }}</p>
   </div>
 </div>
+
+<div class="text-center text-2xl m-3">
+  <div *ngIf="match.status === 'FT'">Partita Terminata</div>
+  <div *ngIf="match.status !== 'FT'">Partita non ancora terminata</div>
+</div>
+
+<div class="text-center m-3" *ngIf="match.eventi.length > 0">
+  Eventi più importanti accaduti durante la partita
+  <ul *ngFor="let evento of match.eventi" class="m-5">
+    <div *ngIf="evento.tipo_evento !== 'subst'">
+      <li>Minuto: {{ evento.minuto }}</li>
+      <li>Tipo di evento: {{ evento.tipo_evento }}</li>
+      <li *ngIf="evento.tipo_evento === 'Goal'">
+        Fatto da: {{ evento.nome_giocatore_assist }}
+      </li>
+      <li *ngIf="evento.tipo_evento === 'Card'">Tipo: {{ evento.dettagli }}</li>
+    </div>
+  </ul>
+</div>

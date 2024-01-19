@@ -1,0 +1,45 @@
+<div class="w-full h-44 rounded-3xl flex">
+  <div
+    class="bg-black w-1/2 h-full rounded-tl-3xl rounded-bl-3xl flex flex-col items-center justify-center gap-2"
+  >
+    <p class="text-2xl font font-medium">{{ match.SquadraCasa }}</p>
+    <img
+      class="object-cover h-1/2"
+      src="{{ match.logoCasa }}"
+      alt=""
+      srcset=""
+    />
+    <p class="text-2xl font font-medium">{{ match.GolCasa }}</p>
+  </div>
+  <div
+    class="bg-grigio w-1/2 h-full rounded-tr-3xl rounded-br-3xl flex flex-col items-center justify-center gap-2"
+  >
+    <p class="text-2xl font font-medium">{{ match.SquadraOspite }}</p>
+    <img
+      class="object-cover h-1/2"
+      src="{{ match.logoOspiti }}"
+      alt=""
+      srcset=""
+    />
+    <p class="text-2xl font font-medium">{{ match.GolOspiti }}</p>
+  </div>
+</div>
+
+<div class="text-center text-2xl m-3">
+  <div *ngIf="match.status === 'FT'">Partita Terminata</div>
+  <div *ngIf="match.status !== 'FT'">Partita non ancora terminata</div>
+</div>
+
+<div class="text-center m-3" *ngIf="match.eventi.length > 0">
+  Eventi più importanti accaduti durante la partita
+  <ul *ngFor="let evento of match.eventi" class="m-5">
+    <div *ngIf="evento.tipo_evento !== 'subst'">
+      <li>Minuto: {{ evento.minuto }}</li>
+      <li>Tipo di evento: {{ evento.tipo_evento }}</li>
+      <li *ngIf="evento.tipo_evento === 'Goal'">
+        Fatto da: {{ evento.nome_giocatore_assist }}
+      </li>
+      <li *ngIf="evento.tipo_evento === 'Card'">Tipo: {{ evento.dettagli }}</li>
+    </div>
+  </ul>
+</div>

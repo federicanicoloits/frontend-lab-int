@@ -21,6 +21,8 @@ import { FootballTablesContainerComponent } from './components/specific/football
 import { FootballTablesComponent } from './components/shared/football-tables/football-tables.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { PageNewsNewsContainerComponent } from './components/specific/page-news-news-container/page-news-news-container.component';
+import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
+import { PartitaDettaglioComponent } from './components/specific/partita-dettaglio/partita-dettaglio.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,8 @@ import { PageNewsNewsContainerComponent } from './components/specific/page-news-
     FootballTablesComponent,
     FooterComponent,
     PageNewsNewsContainerComponent,
+    DettaglioPartiteComponent,
+    PartitaDettaglioComponent,
   ],
   imports: [
     BrowserModule,

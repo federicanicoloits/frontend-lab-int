@@ -23,6 +23,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { PageNewsNewsContainerComponent } from './components/specific/page-news-news-container/page-news-news-container.component';
 import { NewsDetailComponent } from './views/news-detail/news-detail.component';
 import { RelatedNewsComponent } from './views/related-news/related-news.component';
+import { NewsCardSideComponent } from './components/shared/news-card-side/news-card-side.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { RelatedNewsComponent } from './views/related-news/related-news.componen
     FootballTablesComponent,
     FooterComponent,
     PageNewsNewsContainerComponent,
+    NewsCardSideComponent,
   ],
   imports: [
     BrowserModule,

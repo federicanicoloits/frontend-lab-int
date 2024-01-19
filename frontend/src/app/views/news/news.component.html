@@ -1,11 +1,6 @@
 <div class="mt-[15vh] p-6">
   <app-page-news-news-container [dati]="news"></app-page-news-news-container>
-  <div *ngFor="let newsItem of news" (click)="navigateToNewsDetail(newsItem.id)">
-  <div class="news-item">
-    <img [src]="newsItem.immagine_copertina" alt="Immagine Copertina">
-    <h2>{{ newsItem.titolo }}</h2>
-    <p>{{ newsItem.sottotitolo }}</p>
-    
-  </div>
-</div>
+  <!--<div *ngFor="let newsItem of news" (click)="onNewsItemClick(newsItem.id)">
+  
+</div>-->
 </div>

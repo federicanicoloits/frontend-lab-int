@@ -15,4 +15,8 @@ export class ApiService {
   findNews() {
     return this.http.get('assets/json/news.json');
   }
+  findNewsDetail() {
+    return this.http.get('assets/json/news-detail.json');
+  }
+  
 }

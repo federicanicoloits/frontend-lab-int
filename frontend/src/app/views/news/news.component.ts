@@ -21,9 +21,6 @@ export class NewsComponent implements OnInit {
     });
   }
 
-   navigateToNewsDetail(newsId: number): void {
-    this.router.navigate(['news/', newsId]);
-  }
 }
 
 

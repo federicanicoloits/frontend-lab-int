@@ -1,11 +1,40 @@
-<div class="news-detail-container" *ngIf="selectedNews">
-  <div class="news-detail-header" [style.background-image]="'url(' + selectedNews.immagine_copertina + ')'">
-    <h1>{{ selectedNews.titolo }}</h1>
+<div class="mt-[15vh] flex flex-col items-center justify-center py-6 w-full h-auto bg-pink-100">
+  <div class="w-full h-[50vh] bg-gray-200">
+    <img class="object-cover h-full w-full rounded-3xl"
+      src="assets/img/allegri.jpg"
+      alt=""
+      srcset=""
+    />
   </div>
-  <div class="news-detail-content">
-    <p>{{ selectedNews.testo }}</p>
-  </div>
-  <div class="related-news-container">
-    <app-related-news [relatedNews]="relatedNews"></app-related-news>
-  </div>
+  <div class="w-full min-h-[50vh] bg-[#121212] p-6">
+    <div *ngIf="idNews">
+      <div class="text-2xl font-semibold flex gap-1 items-center">
+      <i-lucide name="clock" class="my-icon text-white"></i-lucide>
+      <p *ngIf="news" class="font-semibold text-lg">
+        {{ news.news[idNews].data_ora }}
+      </p>
+    </div>
+      <h3 class="text-4xl font-bold">{{news.news[idNews].titolo}}</h3>
+      <h4 class="text-2xl font-semibold">{{news.news[idNews].sottotitolo}}</h4>
+      <div class="flex gap-3">
+      <div class=" flex-row  text-lime-400 w-auto h-auto" *ngFor="let hashtag of news.news[idNews].hashtags">
+        <p class=" w-auto ">{{hashtag}}</p>
+      </div>
+      </div>
+      <p>{{news.news[idNews].testo}}</p>
+    </div>
+    <div class="w-full min-h-[50vh] bg-green-200">
+      <!--<h5 class="text-4xl font-bold">Altri Articoli</h5>
+      <div class="w-full h-auto flex flex-col gap-4">
+          <app-news-card-side> </app-news-card-side>
+      </div>-->
+       <!--<app-news-card-side [dati]="news"> </app-news-card-side>-->
+       <div *ngFor="let singleNews of news.news.slice(1, 4)">
+        <app-news-card-side [dati]="singleNews"></app-news-card-side>
+      </div>
+    </div>
+</div>
+
+
+
 </div>

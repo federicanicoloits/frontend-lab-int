@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Standing } from 'src/app/models/standing.interface';
 
@@ -8,11 +8,7 @@ import { Standing } from 'src/app/models/standing.interface';
   styleUrls: ['./football-tables.component.css'],
 })
 export class FootballTablesComponent implements OnInit {
-  standings: Standing[] = [];
-  constructor(private activatedRoute: ActivatedRoute) {}
-  ngOnInit(): void {
-    this.activatedRoute.data.subscribe(({ StandingsResolve }) => {
-      this.standings = StandingsResolve;
-    });
-  }
+  @Input() standings: Standing[] = [];
+  constructor() {}
+  ngOnInit(): void {}
 }

@@ -5,6 +5,7 @@ import { NewsComponent } from './views/news/news.component';
 import { RisultatiPartiteComponent } from './views/risultati-partite/risultati-partite.component';
 import { ApiService } from './services/api/api.service';
 import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
+import { ClassificaComponent } from './views/classifica/classifica.component';
 
 const routes: Routes = [
   {
@@ -37,6 +38,15 @@ const routes: Routes = [
     resolve: {
       PartiteResolveRisultati: (route: ActivatedRouteSnapshot) => {
         return inject(ApiService).findLastMatches();
+      },
+    },
+  },
+  {
+    path: 'classifica',
+    component: ClassificaComponent,
+    resolve: {
+      StandingsResolveClassifica: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findStandings(20);
       },
     },
   },

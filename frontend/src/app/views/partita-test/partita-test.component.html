@@ -1,0 +1,35 @@
+<div class="h-screen w-full mt-[15vh] bg-purple-400 p-2">
+  <div *ngIf="partita" class="bg-slate-800 w-full h-full flex flex-col p-2">
+    <div
+      class="w-full flex flex-col justify-center items-center"
+      *ngFor="let evento of partita.eventi; let last = last"
+    >
+      <div class="w-full flex">
+        <div
+          [ngClass]="
+            evento.id_squadra === partita.squadre.squadra_casa.id
+              ? 'flex  w-full  '
+              : 'flex w-full flex-row-reverse   '
+          "
+        >
+          <div
+            class="w-1/2 h-20"
+            [ngClass]="
+              evento.id_squadra === partita.squadre.squadra_casa.id
+                ? 'bg-red-800 text-right p-4 '
+                : ' bg-blue-800 p-4'
+            "
+          >
+            <p class="text-white">
+              {{ evento.minuto }}' - {{ evento.tipo }} - {{ evento.giocatore }}
+            </p>
+          </div>
+          <div class="w-1/2 h-20"></div>
+        </div>
+      </div>
+      <ng-container *ngIf="!last">
+        <p>|</p>
+      </ng-container>
+    </div>
+  </div>
+</div>

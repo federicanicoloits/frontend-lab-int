@@ -41,4 +41,8 @@ export class ApiService {
       })
     );
   }
+
+  findDetailMatch() {
+    return this.http.get('assets/json/partita.json');
+  }
 }

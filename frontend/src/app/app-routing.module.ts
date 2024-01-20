@@ -5,6 +5,7 @@ import { NewsComponent } from './views/news/news.component';
 import { RisultatiPartiteComponent } from './views/risultati-partite/risultati-partite.component';
 import { ApiService } from './services/api/api.service';
 import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
+import { PartitaTestComponent } from './views/partita-test/partita-test.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,7 @@ const routes: Routes = [
     },
   },
   { path: 'news', component: NewsComponent },
+  { path: 'partita', component: PartitaTestComponent },
   {
     path: 'risultati-partite',
     component: RisultatiPartiteComponent,

@@ -1,0 +1,40 @@
+{
+  "squadre": {
+    "squadra_casa": {
+      "id": 1,
+      "nome": "Squadra A"
+    },
+    "squadra_ospite": {
+      "id": 2,
+      "nome": "Squadra B"
+    }
+  },
+  "data": "2024-01-20",
+  "eventi": [
+    {
+      "id_squadra": 1,
+      "minuto": 10,
+      "tipo": "goal",
+      "marcatore": "Giocatore X"
+    },
+    {
+      "id_squadra": 2,
+      "minuto": 25,
+      "tipo": "cartellino_giallo",
+      "giocatore": "Giocatore Y"
+    },
+    {
+      "id_squadra": 1,
+      "minuto": 40,
+      "tipo": "sostituzione",
+      "entrante": "Giocatore Z",
+      "uscito": "Giocatore W"
+    },
+    {
+      "id_squadra": 1,
+      "minuto": 60,
+      "tipo": "cartellino_rosso",
+      "giocatore": "Giocatore P"
+    }
+  ]
+}

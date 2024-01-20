@@ -2,11 +2,125 @@
   "squadre": {
     "squadra_casa": {
       "id": 1,
-      "nome": "Squadra A"
+      "nome": "Squadra A",
+      "formazione_casa": [
+        {
+          "id": 101,
+          "nome": "Giocatore1",
+          "ruolo": "P"
+        },
+        {
+          "id": 102,
+          "nome": "Giocatore2",
+          "ruolo": "D"
+        },
+        {
+          "id": 103,
+          "nome": "Giocatore3",
+          "ruolo": "D"
+        },
+        {
+          "id": 104,
+          "nome": "Giocatore4",
+          "ruolo": "D"
+        },
+        {
+          "id": 105,
+          "nome": "Giocatore5",
+          "ruolo": "D"
+        },
+        {
+          "id": 106,
+          "nome": "Giocatore6",
+          "ruolo": "C"
+        },
+        {
+          "id": 107,
+          "nome": "Giocatore7",
+          "ruolo": "C"
+        },
+        {
+          "id": 108,
+          "nome": "Giocatore8",
+          "ruolo": "A"
+        },
+        {
+          "id": 109,
+          "nome": "Giocatore9",
+          "ruolo": "A"
+        },
+        {
+          "id": 110,
+          "nome": "Giocatore10",
+          "ruolo": "A"
+        },
+        {
+          "id": 111,
+          "nome": "Giocatore11",
+          "ruolo": "A"
+        }
+      ]
     },
     "squadra_ospite": {
       "id": 2,
-      "nome": "Squadra B"
+      "nome": "Squadra B",
+      "formazione_ospiti": [
+        {
+          "id": 201,
+          "nome": "Giocatore12",
+          "ruolo": "P"
+        },
+        {
+          "id": 202,
+          "nome": "Giocatore13",
+          "ruolo": "D"
+        },
+        {
+          "id": 203,
+          "nome": "Giocatore14",
+          "ruolo": "D"
+        },
+        {
+          "id": 204,
+          "nome": "Giocatore15",
+          "ruolo": "D"
+        },
+        {
+          "id": 205,
+          "nome": "Giocatore16",
+          "ruolo": "D"
+        },
+        {
+          "id": 206,
+          "nome": "Giocatore17",
+          "ruolo": "C"
+        },
+        {
+          "id": 207,
+          "nome": "Giocatore18",
+          "ruolo": "C"
+        },
+        {
+          "id": 208,
+          "nome": "Giocatore19",
+          "ruolo": "A"
+        },
+        {
+          "id": 209,
+          "nome": "Giocatore20",
+          "ruolo": "A"
+        },
+        {
+          "id": 210,
+          "nome": "Giocatore21",
+          "ruolo": "A"
+        },
+        {
+          "id": 211,
+          "nome": "Giocatore22",
+          "ruolo": "A"
+        }
+      ]
     }
   },
   "data": "2024-01-20",
@@ -33,7 +147,7 @@
     {
       "id_squadra": 1,
       "minuto": 60,
-      "tipo": "cartellino_rosso",
+      "tipo": "cartellino_rossoo",
       "giocatore": "Giocatore P"
     }
   ]

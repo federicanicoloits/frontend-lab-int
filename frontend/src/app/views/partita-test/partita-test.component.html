@@ -1,5 +1,6 @@
-<div class="h-screen w-full mt-[15vh] bg-purple-400 p-2">
-  <div *ngIf="partita" class="bg-slate-800 w-full h-full flex flex-col p-2">
+<div class="min-h-screen w-full mt-[15vh] bg-purple-200 p-2">
+  <!-- risultati -->
+  <div *ngIf="partita" class="bg-slate-800 w-full h-auto flex flex-col p-2">
     <div
       class="w-full flex flex-col justify-center items-center"
       *ngFor="let evento of partita.eventi; let last = last"
@@ -30,6 +31,37 @@
       <ng-container *ngIf="!last">
         <p>|</p>
       </ng-container>
+    </div>
+    <!-- formazioni -->
+    <div class="bg-green-300 w-full min-h-[50vh] flex flex-wrap">
+      <div class="w-full bg-blue-700 lg:w-1/2 h-auto flex flex-col gap-5">
+        <h4 class="text-3xl font-bold">Squadra Casa</h4>
+        <div
+          *ngFor="let giocatore of partita.squadre.squadra_casa.formazione_casa"
+        >
+          <div class="flex gap-2 itmes-center">
+            <p class="border-2 border-white rounded-full p-2">
+              {{ giocatore.ruolo }}
+            </p>
+            <p class="text-[1.2rem]">{{ giocatore.nome }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w-full bg-blue-400 lg:w-1/2 h-auto flex flex-col gap-5">
+        <h4 class="text-3xl font-bold">Squadra Ospite</h4>
+        <div
+          *ngFor="
+            let giocatore of partita.squadre.squadra_ospite.formazione_ospiti
+          "
+        >
+          <div class="flex gap-2 itmes-center">
+            <p class="border-2 border-white rounded-full p-2">
+              {{ giocatore.ruolo }}
+            </p>
+            <p class="text-[1.2rem]">{{ giocatore.nome }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

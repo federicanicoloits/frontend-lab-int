@@ -34,7 +34,7 @@
             width="20"
             height="20"
           ></object>
-          <li>Classifica</li>
+          <a href="classifica">Classifica</a>
         </div>
       </ul>
       <div class="flex items-center justify-center gap-2 text-lime-400">
@@ -59,24 +59,13 @@
 <div
   class="bg-black w-full h-16 fixed bottom-0 lg:hidden flex items-center justify-center gap-14 p-4 z-50"
 >
-  <button class="p-2">
-    <object
-      type="image/svg+xml"
-      data="assets/svgs/ball.svg"
-      width="20"
-      height="20"
-    ></object>
+  <button class="p-2" routerLink="risultati-partite">
+    <img src="assets/svgs/ball.svg" alt="" width="20" height="20" />
   </button>
-  <object
-    type="image/svg+xml"
-    data="assets/svgs/newspaper.svg"
-    width="20"
-    height="20"
-  ></object>
-  <object
-    type="image/svg+xml"
-    data="assets/svgs/cup1.svg"
-    width="20"
-    height="20"
-  ></object>
+  <button class="p-2" routerLink="news">
+    <img src="assets/svgs/newspaper.svg" alt="" width="20" height="20" />
+  </button>
+  <button class="p-2" routerLink="classifica">
+    <img src="assets/svgs/cup1.svg" alt="" width="20" height="20" />
+  </button>
 </div>

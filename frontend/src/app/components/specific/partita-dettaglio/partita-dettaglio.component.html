@@ -25,21 +25,70 @@
   </div>
 </div>
 
-<div class="text-center text-2xl m-3">
-  <div *ngIf="match.status === 'FT'">Partita Terminata</div>
-  <div *ngIf="match.status !== 'FT'">Partita non ancora terminata</div>
+<div class="text-center text-3xl font-bold m-3">
+  <h2 *ngIf="match.status === 'FT'">Partita Terminata</h2>
+  <h2 *ngIf="match.status !== 'FT'">Partita non ancora terminata</h2>
 </div>
 
-<div class="text-center m-3" *ngIf="match.eventi.length > 0">
-  Eventi più importanti accaduti durante la partita
-  <ul *ngFor="let evento of match.eventi" class="m-5">
-    <div *ngIf="evento.tipo_evento !== 'subst'">
-      <li>Minuto: {{ evento.minuto }}</li>
-      <li>Tipo di evento: {{ evento.tipo_evento }}</li>
-      <li *ngIf="evento.tipo_evento === 'Goal'">
-        Fatto da: {{ evento.nome_giocatore_assist }}
-      </li>
-      <li *ngIf="evento.tipo_evento === 'Card'">Tipo: {{ evento.dettagli }}</li>
+<div class="m-3" *ngIf="match.eventi.length > 0">
+  <h2 class="text-3xl font-bold">
+    Eventi più importanti accaduti durante la partita
+  </h2>
+  <div
+    class="w-full flex flex-col justify-center items-center"
+    *ngFor="let evento of match.eventi; let last = last"
+  >
+    <div class="w-full flex">
+      <div
+        [ngClass]="
+          evento.id_squadra === match.id_casa
+            ? 'flex  w-full  '
+            : 'flex w-full flex-row-reverse   '
+        "
+      >
+        <div
+          class="w-1/2 h-20"
+          [ngClass]="
+            evento.id_squadra === match.id_casa
+              ? 'bg-black text-right p-4 '
+              : ' bg-grigio p-4'
+          "
+        >
+          <p class="text-white">
+            {{ evento.minuto }}' - {{ evento.tipo_evento }} -
+            {{ evento.nome_giocatore_evento }}
+          </p>
+        </div>
+        <div class="w-1/2 h-20"></div>
+      </div>
     </div>
-  </ul>
+    <ng-container *ngIf="!last">
+      <p>|</p>
+    </ng-container>
+  </div>
+</div>
+<h2 class="text-3xl font-bold">Formazioni</h2>
+<div class="w-full min-h-[50vh] flex flex-wrap">
+  <div class="w-full lg:w-1/2 h-auto flex flex-col gap-5">
+    <h3 class="text-2xl font-bold">Squadra Casa</h3>
+    <div *ngFor="let giocatore of match.formazione_casa">
+      <div class="flex gap-2 itmes-center">
+        <p class="border-2 border-white rounded-full p-2">
+          {{ giocatore.posizione }}
+        </p>
+        <p class="text-[1.2rem]">{{ giocatore.nome }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="w-full lg:w-1/2 h-auto flex flex-col gap-5">
+    <h4 class="text-2xl font-bold">Squadra Ospite</h4>
+    <div *ngFor="let giocatore of match.formazione_ospiti">
+      <div class="flex gap-2 itmes-center">
+        <p class="border-2 border-white rounded-full p-2">
+          {{ giocatore.posizione }}
+        </p>
+        <p class="text-[1.2rem]">{{ giocatore.nome }}</p>
+      </div>
+    </div>
+  </div>
 </div>

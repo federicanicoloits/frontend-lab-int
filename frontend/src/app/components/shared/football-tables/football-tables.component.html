@@ -1,5 +1,7 @@
 <div class="bg-zinc-950 w-full h-full lg:p-10 rounded-3xl">
-  <table class="w-full h-full rounded-3xl text-center table-fixed">
+  <table
+    class="w-full h-full rounded-3xl text-center table-fixed hidden lg:table"
+  >
     <tr>
       <th>Nome</th>
       <th>Classifica</th>
@@ -23,6 +25,27 @@
       <td>{{ squadra.partitePerse }}</td>
       <td>{{ squadra.golFatti }}</td>
       <td>{{ squadra.golSubiti }}</td>
+      <td>{{ squadra.differenzaReti }}</td>
+    </tr>
+  </table>
+  <table class="w-full h-full rounded-3xl text-center table-fixed lg:hidden">
+    <tr>
+      <th>Nome</th>
+      <th>Classifica</th>
+      <th>Punti</th>
+      <th>PG</th>
+      <th>PV</th>
+      <th>DR</th>
+    </tr>
+    <tr *ngFor="let squadra of standings">
+      <td class="flex items-center justify-center">
+        {{ squadra.nome }}
+        <img src="{{ squadra.logo }}" class="h-[5vh]" alt="" />
+      </td>
+      <td>{{ squadra.classifica }}</td>
+      <td>{{ squadra.punti }}</td>
+      <td>{{ squadra.partiteGiocate }}</td>
+      <td>{{ squadra.partiteVinte }}</td>
       <td>{{ squadra.differenzaReti }}</td>
     </tr>
   </table>

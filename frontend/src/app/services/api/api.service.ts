@@ -27,6 +27,10 @@ export class ApiService {
     return this.http.get('assets/json/news.json');
   }
 
+  findNewsDetail() {
+    return this.http.get('assets/json/news-detail.json');
+  }
+
   findLastMatches() {
     return this.http.get(this.baseUrl + 'matches/lastmatches').pipe(
       map((response: any) => {

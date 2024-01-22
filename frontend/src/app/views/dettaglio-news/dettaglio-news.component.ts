@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { SingleNews } from 'src/app/models/news.interface';
 import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
@@ -9,24 +10,18 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class DettaglioNewsComponent implements OnInit {
   selectedNews: any;
-  news: any;
+  news!: SingleNews;
   idNews: any;
   relatedNews: any[] = [];
-
-  constructor(private apiService: ApiService, private route: ActivatedRoute) {}
+  id: string = '';
+  constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.apiService.findNewsDetail().subscribe((response) => {
-      this.news = response;
-      console.log(this.news);
+    this.activatedRoute.params.subscribe((params) => {
+      this.id = params['id'];
     });
-
-    this.route.paramMap.subscribe((params) => {
-      let id = params.get('id');
-      console.log(id);
-      this.idNews = id;
-      console.log(this.idNews);
-      // Ora puoi utilizzare l'ID come desideri
+    this.activatedRoute.data.subscribe(({ NewsResolveNewsId }) => {
+      this.news = NewsResolveNewsId;
     });
   }
 }

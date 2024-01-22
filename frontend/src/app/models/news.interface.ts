@@ -3,15 +3,11 @@ export interface SingleNews {
   data: string;
   titolo: string;
   sottotitolo: string;
-  hashtags: string[];
-  testo: string;
+  hastags: string;
+  testo: string[];
   immagine: string;
 }
 
 export interface AllNews {
   news: SingleNews[];
-}
-
-export interface OneNews {
-  news: SingleNews;
 }

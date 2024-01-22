@@ -44,7 +44,15 @@ const routes: Routes = [
       },
     },
   },
-  { path: 'news/:id', component: DettaglioNewsComponent },
+  {
+    path: 'news/:id',
+    component: DettaglioNewsComponent,
+    resolve: {
+      NewsResolveNewsId: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findNewsDetail(route.paramMap.get('id')!);
+      },
+    },
+  },
   {
     path: 'risultati-partite',
     component: RisultatiPartiteComponent,

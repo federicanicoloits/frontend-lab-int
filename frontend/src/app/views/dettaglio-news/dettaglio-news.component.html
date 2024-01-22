@@ -4,32 +4,30 @@
   <div class="w-full h-[50vh] bg-gray-200">
     <img
       class="object-cover h-full w-full rounded-3xl"
-      src="assets/img/allegri.jpg"
+      [src]="news.immagine"
       alt=""
-      srcset=""
     />
   </div>
   <div class="w-full min-h-[50vh] bg-[#121212] p-6">
-    <div *ngIf="idNews">
+    <div>
       <div class="text-2xl font-semibold flex gap-1 items-center">
         <i-lucide name="clock" class="my-icon text-white"></i-lucide>
         <p *ngIf="news" class="font-semibold text-lg">
-          {{ news.news[idNews].data_ora }}
+          {{ news.data }}
         </p>
       </div>
-      <h3 class="text-4xl font-bold">{{ news.news[idNews].titolo }}</h3>
+      <h3 class="text-4xl font-bold">{{ news.titolo }}</h3>
       <h4 class="text-2xl font-semibold">
-        {{ news.news[idNews].sottotitolo }}
+        {{ news.sottotitolo }}
       </h4>
       <div class="flex gap-3">
-        <div
-          class="flex-row text-lime-400 w-auto h-auto"
-          *ngFor="let hashtag of news.news[idNews].hashtags"
-        >
-          <p class="w-auto">{{ hashtag }}</p>
+        <div class="flex-row text-lime-400 w-auto h-auto">
+          {{ news.hastags }}
         </div>
       </div>
-      <p>{{ news.news[idNews].testo }}</p>
+      <div *ngFor="let paragrafo of news.testo">
+        <p>{{ paragrafo }}</p>
+      </div>
     </div>
     <div class="w-full min-h-[50vh] bg-green-200"></div>
   </div>

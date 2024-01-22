@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { MatchDettaglio } from 'src/app/models/match-dettaglio.interface';
 import { Match } from 'src/app/models/match.interface';
-import { AllNews } from 'src/app/models/news.interface';
+import { AllNews, SingleNews } from 'src/app/models/news.interface';
 import { Standing } from 'src/app/models/standing.interface';
 import * as dayjs from 'dayjs';
 
@@ -38,8 +38,16 @@ export class ApiService {
     );
   }
 
-  findNewsDetail() {
-    return this.http.get('assets/json/news-detail.json');
+  findNewsDetail(id: string) {
+    return this.http.get(this.baseUrl + 'newsid?id=' + id).pipe(
+      map((response: any) => {
+        response.testo = response.testo.split('\r\n');
+        response.data = dayjs(response.data)
+          .format('YYYY-MM-DD HH:mm')
+          .toString();
+        return response as SingleNews;
+      })
+    );
   }
 
   findLastMatches() {

@@ -22,9 +22,8 @@ export class HomeComponent implements OnInit {
     this.activatedRoute.data.subscribe(({ StandingsResolve }) => {
       this.standings = StandingsResolve;
     });
-    this.apiService.findNews().subscribe((response) => {
-      this.news = response;
-      // console.log(this.news);
+    this.activatedRoute.data.subscribe(({ NewsResolveHome }) => {
+      this.news = NewsResolveHome;
     });
   }
 }

@@ -13,6 +13,9 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     resolve: {
+      NewsResolveHome: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findNews();
+      },
       StandingsResolve: (route: ActivatedRouteSnapshot) => {
         return inject(ApiService).findStandings(3);
       },

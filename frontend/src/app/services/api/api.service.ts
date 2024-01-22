@@ -3,7 +3,9 @@ import { Injectable } from '@angular/core';
 import { map } from 'rxjs';
 import { MatchDettaglio } from 'src/app/models/match-dettaglio.interface';
 import { Match } from 'src/app/models/match.interface';
+import { AllNews } from 'src/app/models/news.interface';
 import { Standing } from 'src/app/models/standing.interface';
+import * as dayjs from 'dayjs';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +26,16 @@ export class ApiService {
   }
 
   findNews() {
-    return this.http.get(this.baseUrl + 'news');
+    return this.http.get(this.baseUrl + 'news').pipe(
+      map((response: any) => {
+        response.news.forEach((element: any) => {
+          element.data = dayjs(element.data)
+            .format('YYYY-MM-DD HH:mm')
+            .toString();
+        });
+        return response as AllNews;
+      })
+    );
   }
 
   findNewsDetail() {

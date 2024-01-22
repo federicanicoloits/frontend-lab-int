@@ -7,3 +7,11 @@ export interface SingleNews {
   testo: string;
   immagine: string;
 }
+
+export interface AllNews {
+  news: SingleNews[];
+}
+
+export interface OneNews {
+  news: SingleNews;
+}

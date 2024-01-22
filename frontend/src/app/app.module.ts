@@ -24,6 +24,7 @@ import { PageNewsNewsContainerComponent } from './components/specific/page-news-
 import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
 import { PartitaDettaglioComponent } from './components/specific/partita-dettaglio/partita-dettaglio.component';
 import { ClassificaComponent } from './views/classifica/classifica.component';
+import { DettaglioNewsComponent } from './views/dettaglio-news/dettaglio-news.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ClassificaComponent } from './views/classifica/classifica.component';
     DettaglioPartiteComponent,
     PartitaDettaglioComponent,
     ClassificaComponent,
+    DettaglioNewsComponent,
   ],
   imports: [
     BrowserModule,

@@ -6,6 +6,7 @@ import { RisultatiPartiteComponent } from './views/risultati-partite/risultati-p
 import { ApiService } from './services/api/api.service';
 import { DettaglioPartiteComponent } from './views/dettaglio-partite/dettaglio-partite.component';
 import { ClassificaComponent } from './views/classifica/classifica.component';
+import { DettaglioNewsComponent } from './views/dettaglio-news/dettaglio-news.component';
 
 const routes: Routes = [
   {
@@ -32,6 +33,7 @@ const routes: Routes = [
     },
   },
   { path: 'news', component: NewsComponent },
+  { path: 'news/:id', component: DettaglioNewsComponent },
   {
     path: 'risultati-partite',
     component: RisultatiPartiteComponent,

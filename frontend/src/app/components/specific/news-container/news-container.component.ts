@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { AllNews } from 'src/app/models/news.interface';
 
 @Component({
   selector: 'app-news-container',
@@ -6,5 +7,5 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./news-container.component.css'],
 })
 export class NewsContainerComponent {
-  @Input() dati: any;
+  @Input() dati!: AllNews;
 }

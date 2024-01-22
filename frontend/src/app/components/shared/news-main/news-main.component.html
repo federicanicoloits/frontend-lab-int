@@ -4,9 +4,8 @@
   <div class="h-[45vh] w-full md:w-[42%] relative">
     <img
       class="object-cover h-full w-full rounded-3xl"
-      src="assets/img/allegri.jpg"
+      [src]="dati.news[0].immagine"
       alt=""
-      srcset=""
     />
     <div
       class="h-full w-full opacity-15 absolute top-0 left-0 rounded-3xl"
@@ -17,15 +16,15 @@
   >
     <div class="flex gap-1 items-center">
       <i-lucide name="clock" class="my-icon text-white"></i-lucide>
-      <p *ngIf="dati" class="font-semibold text-lg">
-        {{ dati.news[0]?.data_ora }}
+      <p class="font-semibold text-lg">
+        {{ dati.news[0].data }}
       </p>
     </div>
     <h2 class="font-bold text-lime-400 text-3xl">
-      {{ dati?.news[0]?.titolo }}
+      {{ dati.news[0].titolo }}
     </h2>
     <p class="line-clamp-4 text-lg">
-      {{ dati?.news[0]?.testo }}
+      {{ dati.news[0].testo }}
     </p>
     <div class="flex gap-1">
       <p class="text-lg">leggi di più</p>

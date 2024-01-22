@@ -4,7 +4,7 @@
   </div>
   <app-news-main [dati]="dati"></app-news-main>
   <div class="w-full h-auto flex justify-around gap-4 overflow-x-auto lg:p-4">
-    <ng-container *ngFor="let newsItem of dati?.news; let i = index">
+    <ng-container *ngFor="let newsItem of dati.news; let i = index">
       <!-- Verifica se l'indice è maggiore di zero (escludi la prima notizia) -->
       <ng-container *ngIf="i > 0 && i <= 3">
         <app-news-side [dati]="newsItem"></app-news-side>

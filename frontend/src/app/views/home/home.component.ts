@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { AllNews } from 'src/app/models/news.interface';
 import { Standing } from 'src/app/models/standing.interface';
-import { ApiService } from 'src/app/services/api/api.service';
 
 @Component({
   selector: 'app-home',
@@ -10,14 +10,10 @@ import { ApiService } from 'src/app/services/api/api.service';
 })
 export class HomeComponent implements OnInit {
   standings: Standing[] = [];
-  squadreClassifica: any;
 
-  news: any;
+  news!: AllNews;
 
-  constructor(
-    private apiService: ApiService,
-    private activatedRoute: ActivatedRoute
-  ) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
     this.activatedRoute.data.subscribe(({ StandingsResolve }) => {
       this.standings = StandingsResolve;

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { AllNews } from 'src/app/models/news.interface';
 import { ApiService } from 'src/app/services/api/api.service';
 @Component({
   selector: 'app-news',
@@ -6,13 +8,12 @@ import { ApiService } from 'src/app/services/api/api.service';
   styleUrls: ['./news.component.css'],
 })
 export class NewsComponent implements OnInit {
-  news: any;
+  news!: AllNews;
 
-  constructor(private apiService: ApiService) {}
+  constructor(private activatedRoute: ActivatedRoute) {}
   ngOnInit(): void {
-    this.apiService.findNews().subscribe((response) => {
-      this.news = response;
-      console.log(this.news);
+    this.activatedRoute.data.subscribe(({ NewsResolveNews }) => {
+      this.news = NewsResolveNews;
     });
   }
 }

@@ -35,7 +35,15 @@ const routes: Routes = [
       },
     },
   },
-  { path: 'news', component: NewsComponent },
+  {
+    path: 'news',
+    component: NewsComponent,
+    resolve: {
+      NewsResolveNews: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findNews();
+      },
+    },
+  },
   { path: 'news/:id', component: DettaglioNewsComponent },
   {
     path: 'risultati-partite',

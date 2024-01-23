@@ -14,7 +14,13 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { NewsContainerComponent } from './components/specific/news-container/news-container.component';
 import { NewsMainComponent } from './components/shared/news-main/news-main.component';
 import { NewsSideComponent } from './components/shared/news-side/news-side.component';
-import { LucideAngularModule, Clock, Info, ChevronDown } from 'lucide-angular';
+import {
+  LucideAngularModule,
+  Clock,
+  Info,
+  ChevronDown,
+  Eye,
+} from 'lucide-angular';
 import { LastmatchContainerComponent } from './components/specific/lastmatch-container/lastmatch-container.component';
 import { SinglematchPreviewComponent } from './components/shared/singlematch-preview/singlematch-preview.component';
 import { FootballTablesContainerComponent } from './components/specific/football-tables-container/football-tables-container.component';
@@ -57,6 +63,7 @@ import { DettaglioNewsComponent } from './views/dettaglio-news/dettaglio-news.co
       Clock,
       Info,
       ChevronDown,
+      Eye,
     }),
   ],
   providers: [ApiService],

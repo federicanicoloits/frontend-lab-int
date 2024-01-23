@@ -11,8 +11,7 @@ import { ApiService } from 'src/app/services/api/api.service';
 export class DettaglioNewsComponent implements OnInit {
   selectedNews: any;
   news!: SingleNews;
-  idNews: any;
-  relatedNews: any[] = [];
+  relatedNews: SingleNews[] = [];
   id: string = '';
   constructor(private activatedRoute: ActivatedRoute) {}
 
@@ -22,6 +21,9 @@ export class DettaglioNewsComponent implements OnInit {
     });
     this.activatedRoute.data.subscribe(({ NewsResolveNewsId }) => {
       this.news = NewsResolveNewsId;
+    });
+    this.activatedRoute.data.subscribe(({ AllNewsResolveNewsId }) => {
+      this.relatedNews = AllNewsResolveNewsId.news;
     });
   }
 }

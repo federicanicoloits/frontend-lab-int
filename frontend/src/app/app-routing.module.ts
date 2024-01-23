@@ -51,6 +51,9 @@ const routes: Routes = [
       NewsResolveNewsId: (route: ActivatedRouteSnapshot) => {
         return inject(ApiService).findNewsDetail(route.paramMap.get('id')!);
       },
+      AllNewsResolveNewsId: (route: ActivatedRouteSnapshot) => {
+        return inject(ApiService).findNews();
+      },
     },
   },
   {

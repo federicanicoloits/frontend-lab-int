@@ -40,40 +40,43 @@
     <div class="w-full md:w-2/3 h-auto text-left">
       <h4 class="text-white font-bold text-4xl">Altri Articoli</h4>
     </div>
-    <ng-container *ngFor="let newsItem of relatedNews; let i = index">
-      <ng-container *ngIf="newsItem.id.toString() !== id">
-        <div
-          class="bg-grigio w-full md:w-2/3 min-h-[40vh] flex flex-col md:flex-row rounded-3xl"
-        >
-          <div class="w-full md:w-[45%] h-full">
-            <img
-              class="object-cover h-full w-full rounded-t-3xl md:rounded-3xl"
-              [src]="newsItem.immagine"
-              alt=""
-            />
-          </div>
-          <div
-            class="w-full md:w-[55%] h-full flex flex-col gap-6 justify-center p-6"
-          >
-            <h5 class="text-4xl font-semibold">
-              {{ newsItem.titolo }}
-            </h5>
-            <p class="line-clamp-2 text-lg">
-              {{ newsItem.testo }}
-            </p>
-            <div class="flex items-center gap-4">
-              <div class="flex gap-1 items-center">
-                <i-lucide name="clock" class="my-icon text-white"></i-lucide>
-                <p class="font-semibold text-lg">{{ newsItem.data }}</p>
-              </div>
-              <div class="flex gap-1 items-center">
-                <i-lucide name="eye" class="my-icon text-white"></i-lucide>
-                <p class="font-semibold text-lg">400 visite</p>
+    <div
+      *ngFor="let newsItem of relatedNews; let i = index"
+      class="w-full md:w-2/3"
+    >
+      <div *ngIf="i < 3 && newsItem.id.toString() !== id" class="min-h-[40vh]">
+        <a [routerLink]="'/news/' + newsItem.id">
+          <div class="bg-grigio flex flex-col md:flex-row rounded-3xl">
+            <div class="w-full md:w-[45%] h-full">
+              <img
+                class="object-cover h-full w-full rounded-t-3xl md:rounded-3xl"
+                [src]="newsItem.immagine"
+                alt=""
+              />
+            </div>
+            <div
+              class="w-full md:w-[55%] h-full flex flex-col gap-6 justify-center p-6"
+            >
+              <h5 class="text-4xl font-semibold">
+                {{ newsItem.titolo }}
+              </h5>
+              <p class="line-clamp-2 text-lg">
+                {{ newsItem.testo }}
+              </p>
+              <div class="flex items-center gap-4">
+                <div class="flex gap-1 items-center">
+                  <i-lucide name="clock" class="my-icon text-white"></i-lucide>
+                  <p class="font-semibold text-lg">{{ newsItem.data }}</p>
+                </div>
+                <div class="flex gap-1 items-center">
+                  <i-lucide name="eye" class="my-icon text-white"></i-lucide>
+                  <p class="font-semibold text-lg">400 visite</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ng-container>
-    </ng-container>
+        </a>
+      </div>
+    </div>
   </div>
 </div>

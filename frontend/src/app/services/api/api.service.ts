@@ -64,4 +64,8 @@ export class ApiService {
       })
     );
   }
+
+  newsletter(mail: string) {
+    return this.http.get(this.baseUrl + 'newsletter?mail=' + mail);
+  }
 }

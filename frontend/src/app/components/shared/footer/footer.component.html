@@ -19,11 +19,18 @@
     <h5 class="text-2xl font-medium">NewsLetter</h5>
     <div class="flex">
       <input
-        class="w-40 h-12 rounded-l-full p-2"
+        class="w-40 h-12 rounded-l-full p-2 text-black"
         type="text"
-        placeholder="scrivici"
+        placeholder="inserisci la tua email"
+        [(ngModel)]="mail"
       />
-      <button class="bg-blue-500 w-16 h-12 rounded-r-full p-2">invia</button>
+      <button
+        [disabled]="mail === ''"
+        class="bg-blue-500 w-16 h-12 rounded-r-full p-2"
+        (click)="inviaMail()"
+      >
+        invia
+      </button>
     </div>
   </div>
 </footer>

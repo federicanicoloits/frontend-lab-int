@@ -11,9 +11,10 @@ Nella sezione dedicata ai risultati delle partite, vengono mostrate le ultime pa
 ## Prerequisiti
 
 Elenco dei requisiti necessari per far funzionare il progetto.
-• Node.js
-• npm (Node Package Manager)
-• Angular CLI (richiede come versione minima di node la 18.10)
+
+- Node.js
+- npm (Node Package Manager)
+- Angular CLI (richiede come versione minima di node la 18.10)
 
 ## Installazione
 
@@ -31,7 +32,9 @@ Il progetto sarà ora accessibile all'indirizzo http://localhost:4200/
 Il progetto è organizzato in diverse cartelle per garantire una struttura chiara e modulare:
 
 - COMPONENTS: Contiene i componenti riutilizzabili dell'applicazione. Questa cartella è
-  ulteriormente suddivisa in: - SHARED: Componenti condivisi e utilizzati in più parti dell'applicazione. - SPECIFIC: Componenti utilizzati solo in specifiche sezioni dell'applicazione.
+  ulteriormente suddivisa in:
+  - SHARED: Componenti condivisi e utilizzati in più parti dell'applicazione.
+  - SPECIFIC: Componenti utilizzati solo in specifiche sezioni dell'applicazione.
 - MODELS: Contiene i modelli che rappresentano le risposte dati fornite dal database.
 - VIEWS: Contiene le viste dell'applicazione, ovvero le diverse schermate e pagine.
 - SERVICES: Questa cartella è dedicata ai servizi, inclusi quelli per le chiamate API.

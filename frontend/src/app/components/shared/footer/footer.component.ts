@@ -14,6 +14,8 @@ export class FooterComponent implements OnInit {
   ngOnInit(): void {}
 
   inviaMail(): void {
-    this.apiService.newsletter(this.mail);
+    this.apiService.newsletter(this.mail).subscribe((dato: any) => {
+      this.mailinviata = dato;
+    });
   }
 }
